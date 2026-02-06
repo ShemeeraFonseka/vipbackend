@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 // MongoDB connection URI
-const mongoURI = process.env.MONGO_URI || 'mongodb+srv://shemeerafonseka:shemeerafonseka@shemeeracluster.0zhgl.mongodb.net/tourist?retryWrites=true&w=majority&appName=ShemeeraCluster';
+const mongoURI = process.env.MONGO_URI;
 
 let isConnected = false;
 

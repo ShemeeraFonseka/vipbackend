@@ -20,26 +20,6 @@ import connectDB from './db.js';
 import { initGridFS } from './config/gridfsConfig.js';
 
 // Import routes
-import packagesRoutes from './routes/packages.js';
-import bookingStepsRoutes from './routes/bookingSteps.js';
-import bookingsRoutes from './routes/bookings.js';
-import servicesRoutes from './routes/services.js';
-import guidesRoutes from './routes/guides.js';
-import aboutRoutes from './routes/about.js';
-import contactInfoRoutes from './routes/contactInfo.js';
-import usersRoutes from './routes/users.js';
-import authRoutes from './routes/auth.js';
-import dashboardRoutes from './routes/dashboard.js';
-
-import travelaAboutRoutes from './travelaroutes/travelaAbout.js';
-import travelaServiceRoutes from './travelaroutes/travelaService.js';
-import travelaPackageRoutes from './travelaroutes/travelaPackage.js';
-import travelaGuideRoutes from './travelaroutes/travelaGuide.js';
-import travelabookingsRoutes from './travelaroutes/travelaBooking.js';
-import travelausersRoutes from './travelaroutes/travelaUser.js';
-import travelacontactInfoRoutes from './travelaroutes/travelaContactInfo.js';
-import traveladashboardRoutes from './travelaroutes/travelaDashboard.js';
-import travelaauthRoutes from './travelaroutes/travelaAuth.js';
 
 import vipAboutRoutes from './viproutes/vipAbout.js';
 import vipcontactInfoRoutes from './viproutes/vipContactInfo.js';
@@ -50,6 +30,8 @@ import vipTestimonialRoutes from './viproutes/vipTestimonial.js';
 import vipPackageRoutes from './viproutes/vipPackage.js';
 import vipbookingsRoutes from './viproutes/vipBooking.js';
 import imageRoutes from './viproutes/imageRoutes.js';
+import vipusersRoutes from './viproutes/vipUser.js';
+import vipauthRoutes from './viproutes/vipAuth.js';
 
 
 
@@ -94,26 +76,7 @@ app.get('/', (req, res) => {
 });
 
 // Routes
-app.use('/api/packages', packagesRoutes);
-app.use('/api/bookingSteps', bookingStepsRoutes);
-app.use('/api/bookings', bookingsRoutes);
-app.use('/api/services', servicesRoutes);
-app.use('/api/guides', guidesRoutes);
-app.use('/api/about', aboutRoutes);
-app.use('/api/contact-info', contactInfoRoutes);
-app.use('/api/users', usersRoutes);
-app.use('/api/auth', authRoutes);
-app.use('/api/dashboard', dashboardRoutes);
 
-app.use('/travelaapi/about', travelaAboutRoutes);
-app.use('/travelaapi/services', travelaServiceRoutes);
-app.use('/travelaapi/packages', travelaPackageRoutes);
-app.use('/travelaapi/guides', travelaGuideRoutes);
-app.use('/travelaapi/bookings', travelabookingsRoutes);
-app.use('/travelaapi/users', travelausersRoutes);
-app.use('/travelaapi/contact-info', travelacontactInfoRoutes);
-app.use('/travelaapi/dashboard', traveladashboardRoutes);
-app.use('/travelaapi/auth', travelaauthRoutes);
 
 app.use('/vipapi/about', vipAboutRoutes);
 app.use('/vipapi/contact-info', vipcontactInfoRoutes);
@@ -124,6 +87,10 @@ app.use('/vipapi/testimonials', vipTestimonialRoutes);
 app.use('/vipapi/packages', vipPackageRoutes);
 app.use('/vipapi/bookings', vipbookingsRoutes);
 app.use('/vipapi/images', imageRoutes);
+app.use('/vipapi/users', vipusersRoutes);
+app.use('/vipapi/auth', vipauthRoutes);
+
+
 
 app.use('/vipapi/carousel', express.static(path.join(process.cwd(), 'uploads/carousel')));
 
